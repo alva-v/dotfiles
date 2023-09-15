@@ -184,7 +184,7 @@ bar {
 
 # Assign workspaces
 assign [class="Firefox-esr"] $ws1 
-assign [class="keepass2"] $ws1
+assign [class="KeePass2"] $ws1
 assign [class="Transmission-gtk"] $ws4
 assign [class="slsk"] $ws4
 assign [class="VSCodium"] $ws3
@@ -197,4 +197,4 @@ assign [class="Tor Browser"] 5
 exec --no-startup-id keepass2
 exec --no-startup-id redshift
 # Set wallpaper
-exec_always feh --bg-fill ~/Pictures/bg/two-women-under-tree.png
+exec_always feh --bg-fill ~/Pictures/bg/miyazaki.png
