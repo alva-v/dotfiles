@@ -42,8 +42,8 @@ path_exists VPN {
 }
 
 wireless _first_ {
-  format_up = "W:%quality at %essid"
-  format_down = "W:❌"
+  format_up = "📡:%quality at %essid"
+  format_down =" 📡:❌"
 }
 
 ethernet _first_ {
