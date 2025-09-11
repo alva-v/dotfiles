@@ -38,7 +38,7 @@ time {
 path_exists VPN {
   format = "%title:🔒"
   format_down = "%title:🔓" 
-  path = "/proc/sys/net/ipv4/conf/wg-mullvad/"
+  path = "/proc/sys/net/ipv4/conf/wg0-mullvad/"
 }
 
 wireless _first_ {
