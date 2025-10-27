@@ -187,6 +187,7 @@ assign [class="Firefox-esr"] $ws1
 assign [class="KeePass2"] $ws1
 assign [class="Transmission-gtk"] $ws4
 assign [class="slsk"] $ws4
+assign [class="Nicotine"] $ws4
 assign [class="VSCodium"] $ws3
 assign [class="Joplin"] $ws3
 assign [class="Anki"] $ws3
