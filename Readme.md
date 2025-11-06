@@ -1,7 +1,10 @@
 # Dotfiles
-My configurations files.
+My Linux configurations files and a simple bootstrapping script.
 
 This is a very incomplete work in progress
 
-## TODO
-- [ ] Bash script to automatically create needed symlinks
+## Usage
+Clone this repo in `~/dotfiles`, then run:
+```
+bash bootstrap.sh
+```
