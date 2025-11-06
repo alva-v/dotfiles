@@ -5,5 +5,4 @@ if [[ $(realpath ..) != "$HOME" ]]; then
     exit 1
 fi
 
-# Stow
-
+stow --verbose=2 .
