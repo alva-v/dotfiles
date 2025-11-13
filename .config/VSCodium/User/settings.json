@@ -1,0 +1,10 @@
+{
+  "editor.rulers": [80, 120],
+  "files.associations": {
+    "*.php.stub": "php"
+  },
+  "editor.renderWhitespace": "all",
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.gpuAcceleration": "off",
+  "window.zoomLevel": -1,
+}
