@@ -1,4 +1,5 @@
 {
+  "editor.accessibilitySupport": "off",
   "editor.rulers": [80, 120],
   "files.associations": {
     "*.php.stub": "php"
@@ -7,4 +8,6 @@
   "redhat.telemetry.enabled": false,
   "terminal.integrated.gpuAcceleration": "off",
   "window.zoomLevel": -1,
+  "workbench.colorTheme": "Sweet Dracula",
+  "workbench.iconTheme": "catppuccin-mocha",
 }
