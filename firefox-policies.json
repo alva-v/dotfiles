@@ -1,0 +1,46 @@
+{
+  "policies": {
+    "ExtensionSettings": {
+      "uBlock0@raymondhill.net": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+      },
+      "companion@radiofrance.fr": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/companion-for-radio-france/latest.xpi"
+      },
+      "{60f82f00-9ad5-4de5-b31c-b16a47c51558}": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/cookie-quick-manager/latest.xpi"
+      },
+      "jid1-KKzOGWgsW3Ao4Q@jetpack": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/latest.xpi"
+      },
+      "@react-devtools": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/react-devtools/latest.xpi"
+      },
+      "redirector@einaregilsson.com": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/redirector/latest.xpi"
+      },
+      "sponsorBlocker@ajay.app": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi"
+      },
+      "myallychou@gmail.com": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/youtube-recommended-videos/latest.xpi"
+      },
+      "{7a7b1d36-d7a4-481b-92c6-9f5427cb9eb1}": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/wallabagger/latest.xpi"
+      },
+      "wayback_machine@mozilla.org": {
+        "installation_mode": "normal_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/wayback-machine_new/latest.xpi"
+      }
+    }
+  }
+}

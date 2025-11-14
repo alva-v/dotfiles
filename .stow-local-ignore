@@ -2,4 +2,4 @@
 
 Readme\.md
 bootstrap\.sh
-Redirector\.json # this one should be moved to the proper directory
+firefox-policies\.json
