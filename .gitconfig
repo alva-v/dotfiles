@@ -1,0 +1,6 @@
+[user]
+	name = Alva Vially
+[init]
+	defaultBranch = main
+[core]
+	editor = vim

@@ -137,6 +137,7 @@ alias xampp="sudo /opt/lampp/lampp"
 alias bt="bluetoothctl"
 
 # Variables for personal use
-export HEADSET SPEAKER
+export EMAIL HEADSET SPEAKER
+EMAIL=$(pass Dotfiles/email)
 HEADSET=$(pass Dotfiles/MAC/headset)
 SPEAKER=$(pass Dotfiles/MAC/speaker)
