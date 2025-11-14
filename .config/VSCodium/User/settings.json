@@ -10,4 +10,10 @@
   "window.zoomLevel": -1,
   "workbench.colorTheme": "Sweet Dracula",
   "workbench.iconTheme": "catppuccin-mocha",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
