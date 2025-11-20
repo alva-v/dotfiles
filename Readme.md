@@ -11,7 +11,7 @@ Clone this repo in `~/.dotfiles`, then run:
 bash bootstrap.sh
 ```
 
-## Notes on non-automated files
+## Notes on non-automated files
 ### Redirector.json
 Config for the firefox extension
 
