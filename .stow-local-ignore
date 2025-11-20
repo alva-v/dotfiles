@@ -2,6 +2,7 @@
 
 Readme\.md
 bootstrap\.sh
+update.sh
 firefox-policies\.json
 non-automated/*
 non-home/*
