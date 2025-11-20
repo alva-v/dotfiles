@@ -1,0 +1,227 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2025-11-20T09:22:36.557Z",
+    "redirects": [
+        {
+            "description": "Laravel doc version",
+            "exampleUrl": "https://laravel.com/api/9.x/Illuminate/Auth/Console.html",
+            "exampleResult": "https://laravel.com/api/10.x/Illuminate/Auth/Console.html",
+            "error": null,
+            "includePattern": "https?://laravel\\.com/(api|docs)/(?:\\d\\d?\\.[\\dx]|master)(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://laravel.com/$1/10.x$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Filament Docs Version",
+            "exampleUrl": "https://filamentphp.com/docs/2.x/admin/navigation",
+            "exampleResult": "https://filamentphp.com/docs/3.x/admin/navigation",
+            "error": null,
+            "includePattern": "https?://filamentphp\\.com/docs/\\d\\.x(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://filamentphp.com/docs/3.x$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "PHPUnit doc version",
+            "exampleUrl": "https://docs.phpunit.de/en/9.6/assertions.html",
+            "exampleResult": "https://docs.phpunit.de/en/10.3/assertions.html",
+            "error": null,
+            "includePattern": "https?://docs\\.phpunit\\.de/en/\\d\\d?\\.\\d(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://docs.phpunit.de/en/10.3$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Reddit to Libreddit",
+            "exampleUrl": "https://www.reddit.com/r/latex",
+            "exampleResult": "https://lr.ptr.moe/r/latex",
+            "error": null,
+            "includePattern": "^http(?:s)?://www.reddit.com(.*)$",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://lr.ptr.moe$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Tumblr profile to Priviblur",
+            "exampleUrl": "https://neil-gaiman.tumblr.com/",
+            "exampleResult": "https://pb.bloat.cat/neil-gaiman",
+            "error": null,
+            "includePattern": "https://(.*)\\.tumblr\\.com/?",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://pb.bloat.cat/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "X to Nitter",
+            "exampleUrl": "https://twitter.com/thephpf",
+            "exampleResult": "https://nitter.net/thephpf",
+            "error": null,
+            "includePattern": "https?://(?:x|twitter)\\.com(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://nitter.net$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Medium to Scribe",
+            "exampleUrl": "https://htoopyaelwin.medium.com/organizing-your-dotfiles-managing-secrets-8fd33f06f9bf",
+            "exampleResult": "https://htoopyaelwin.scribe.rip/organizing-your-dotfiles-managing-secrets-8fd33f06f9bf",
+            "error": null,
+            "includePattern": "https?://(.*\\.)?medium.com(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://$1scribe.rip$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Wikipedia mobile to desktop",
+            "exampleUrl": "https://en.m.wikipedia.org/wiki/Hidden_file_and_hidden_directory",
+            "exampleResult": "https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory",
+            "error": null,
+            "includePattern": "http(?:s)?://([\\w]{2}).m.wikipedia.org/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://$1.wikipedia.org/$2",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "No Youtube shorts",
+            "exampleUrl": "https://www.youtube.com/shorts/GzQGPs9G_LA",
+            "exampleResult": "https://www.youtube.com/watch?v=GzQGPs9G_LA",
+            "error": null,
+            "includePattern": "https?://www\\.youtube.com/shorts/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.youtube.com/watch?v=$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Deutsche Post to Parcelsapp",
+            "exampleUrl": "https://www.packet.deutschepost.com/webapp/public/packet_traceit.xhtml?barcode=LY518975925DE",
+            "exampleResult": "https://parcelsapp.com/fr/tracking/LY518975925DE",
+            "error": null,
+            "includePattern": "https://www\\.packet\\.deutschepost\\.com/webapp/public/packet_traceit\\.xhtml\\?barcode=([0-9,A-Z]*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://parcelsapp.com/fr/tracking/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Imgur to Rimgo",
+            "exampleUrl": "https://imgur.com/gallery/computer-literacy-aMn3FRX",
+            "exampleResult": "https://imgur.nerdvpn.de/gallery/computer-literacy-aMn3FRX",
+            "error": null,
+            "includePattern": "https?://imgur.com(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://imgur.nerdvpn.de$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "WBM Libreddit to Reddit",
+            "exampleUrl": "https://web.archive.org/web/2/https://lr.ptr.moe/r/LaTeX/comments/1gvkpqk/idk_if_memes_are_approved/",
+            "exampleResult": "https://web.archive.org/web/2/https://reddit.com/r/LaTeX/comments/1gvkpqk/idk_if_memes_are_approved/",
+            "error": null,
+            "includePattern": "https?://web\\.archive\\.org/web/2/https?://lr.ptr.moe(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://web.archive.org/web/2/https://reddit.com$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "DOI to Sci-Hub",
+            "exampleUrl": "https://doi.org/10.3991/ijes.v5i1.6437",
+            "exampleResult": "https://sci-hub.se/https://doi.org/10.3991/ijes.v5i1.6437",
+            "error": null,
+            "includePattern": "^(https?://(?:dx\\.)?doi\\.org/(?:.*))",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://sci-hub.se/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
