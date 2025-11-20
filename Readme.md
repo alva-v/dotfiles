@@ -8,9 +8,19 @@ The `non-automated` folder contains files that I still have to set up bootstrapp
 The `non-home` folder contains files that are above the home folder in the folder hierarchy and config files that are to be used by the bootstrapping script without being stowed.
 
 ## Usage
+`pass` should be initialized and contain the following secrets:
+* `Dotfiles/email`
+* `Dotfiles/MAC/headset`
+* `Dotfiles/MAC/speaker`
+
 Clone this repo in `~/.dotfiles`, then run:
 ```
 bash bootstrap.sh
+```
+
+You can update non symlinked files by using the following:
+```
+bash update.sh
 ```
 
 ## Notes on non-automated files

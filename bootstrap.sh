@@ -3,7 +3,7 @@
 set -e
 
 install_codium_extensions() {
-    xargs -L 1 codium --install-extension < ./non-home/codium_extensions
+    xargs -L 1 codium --install-extension < ./non-home/codium-extensions
 }
 
 install_firefox_policies() {
