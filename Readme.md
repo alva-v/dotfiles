@@ -1,8 +1,6 @@
 # Dotfiles
 My Linux configurations files and a simple bootstrapping script.
 
-This is a very incomplete work in progress.
-
 The `non-automated` folder contains files that I still have to set up bootstrapping logic for.
 
 The `non-home` folder contains files that are above the home folder in the folder hierarchy and config files that are to be used by the bootstrapping script without being stowed.
@@ -17,7 +15,6 @@ Clone this repo in `~/.dotfiles`, then run:
 ```
 bash bootstrap.sh
 ```
-
 You can update non symlinked files by using the following:
 ```
 bash update.sh
