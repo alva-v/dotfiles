@@ -19,6 +19,6 @@ if [[ $(realpath ..) != "$HOME" ]]; then
     exit 1
 fi
 
-stow --verbose=2 .
+stow --adopt --verbose=2 .
 install_firefox_policies
 install_codium_extensions

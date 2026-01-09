@@ -167,6 +167,7 @@ assign [class="KeePass2"] $ws1
 assign [class="Transmission-gtk"] $ws4
 assign [class="slsk"] $ws4
 assign [class="Nicotine"] $ws4
+assign [class="Gnome-terminal"] $ws3
 assign [class="VSCodium"] $ws3
 assign [class="Joplin"] $ws3
 assign [class="Anki"] $ws3
@@ -177,6 +178,8 @@ assign [class="Tor Browser"] 5
 
 # Startup
 exec --no-startup-id keepass2
+exec --no-startup-id gnome-terminal
 exec --no-startup-id redshift
+
 # Set wallpaper
 exec_always feh --bg-fill ~/Pictures/bg/ibm.png
