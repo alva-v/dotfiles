@@ -49,4 +49,6 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 	unset f
 fi
 
+setxkbmap fr &
+
 exec i3
