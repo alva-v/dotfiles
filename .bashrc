@@ -112,17 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-# Change PEAR PHP version
-export PHP_PEAR_PHP_BIN=/usr/local/bin/php
-
-# Custom PATH
-export PATH="/opt/node/bin:$PATH"
-
-export VISUAL=vim
-
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -135,9 +124,3 @@ alias vpn-off="mullvad disconnect && mullvad lockdown-mode set off && mullvad st
 alias vpn-rst="mullvad reconnect && mullvad status && sleep 1 && mullvad status"
 alias xampp="sudo /opt/lampp/lampp"
 alias bt="bluetoothctl"
-
-# Variables for personal use
-export EMAIL HEADSET SPEAKER
-EMAIL=$(pass Dotfiles/email)
-HEADSET=$(pass Dotfiles/MAC/headset)
-SPEAKER=$(pass Dotfiles/MAC/speaker)
