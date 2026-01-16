@@ -28,8 +28,8 @@ install_codium_extensions() {
 install_firefox_policies() {
     sudo mkdir -p /etc/firefox-esr/policies
     sudo mkdir -p /etc/firefox/policies
-    sudo ln -s "$script_dir/non-home/firefox-policies.json" /etc/firefox-esr/policies/policies.json
-    sudo ln -s "$script_dir/non-home/firefox-policies.json" /etc/firefox/policies/policies.json
+    sudo ln -nsf "$script_dir/non-home/firefox-policies.json" /etc/firefox-esr/policies/policies.json
+    sudo ln -nsf "$script_dir/non-home/firefox-policies.json" /etc/firefox/policies/policies.json
 }
 
 # SCRIPT
