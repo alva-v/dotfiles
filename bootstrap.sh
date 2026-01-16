@@ -22,7 +22,7 @@ check_not_root() {
 }
 
 install_codium_extensions() {
-    xargs -L 1 codium --install-extension < "$0"/non-home/codium-extensions
+    xargs -L 1 codium --install-extension < "$script_dir"/non-home/codium-extensions
 }
 
 install_firefox_policies() {
