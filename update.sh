@@ -2,4 +2,5 @@
 
 set -e
 
-codium --list-extensions > ./non-home/codium-extensions
+script_dir=$(cd "$(dirname "$0")" &> /dev/null && pwd)
+codium --list-extensions > "$script_dir"/non-home/codium-extensions
