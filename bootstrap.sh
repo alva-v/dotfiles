@@ -3,7 +3,7 @@
 set -e
 
 # VARIABLES
-script_dir=$(dirname "$0")
+script_dir=$(cd "$(dirname "$0")" &> /dev/null && pwd)
 parent_dir=$(realpath "$(dirname "$script_dir")")
 
 # FUNCTIONS
