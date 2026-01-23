@@ -22,8 +22,12 @@ check_dir() {
 
 check_dotfiles_changes() {
     changed_files=$(git -C "$script_dir" diff --name-only)
-    changed_stowables=$(echo "$changed_files" | grep --fixed-string --line-regexp --file=<(echo "$stowable_files"))
-    if [[ -n $changed_stowables ]]; then
+    changed_stowables=$(
+        echo "$changed_files" |
+        grep --fixed-string --line-regexp --file=<(echo "$stowable_files") ||
+        changed_stowables="" # Prevents error if no match
+    )
+    if [[ -n "$changed_stowables" ]]; then
         echo "Some stowables files have been modified. Please commit, revert or stash them to prevent change override:"
         echo "$changed_stowables"
         exit 1
@@ -44,7 +48,8 @@ install_codium_extensions() {
 install_dotfiles() {
     # Force symlink creation on existing files then revert them to wanted state
     stow --adopt --verbose=2 --dir="$script_dir" .
-    git -C "$script_dir" restore "$stowable_files"
+    echo "Restoring stowed files to their desired state..."
+    git -C "$script_dir" restore $stowable_files
 }
 
 install_firefox_policies() {
