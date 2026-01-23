@@ -1,8 +1,9 @@
-\.git
-
-Readme\.md
-bootstrap\.sh
-update\.sh
-firefox-policies\.json
-non-automated/*
-non-home/*
+^\.git$
+^\.git/.*
+^Readme\.md$
+^bootstrap\.sh$
+^update\.sh$
+^\.stow-local-ignore$
+^firefox-policies\.json$
+^non-automated
+^non-home

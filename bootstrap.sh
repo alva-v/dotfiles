@@ -5,11 +5,27 @@ set -e
 # VARIABLES
 script_dir=$(cd "$(dirname "$0")" &> /dev/null && pwd)
 parent_dir=$(realpath "$(dirname "$script_dir")")
+stowable_files=$(
+    cd $script_dir &&
+    find . -path "./.git" -prune -o -type f -print |
+    sed "s|^\./||" |
+    grep --invert-match --file=.stow-local-ignore
+)
 
 # FUNCTIONS
 check_dir() {
     if [[ "$parent_dir" != "$HOME" ]]; then
         echo "This dotfiles repo should be located in a subfolder of $HOME (eg. $HOME/.dotfiles)"
+        exit 1
+    fi
+}
+
+check_dotfiles_changes() {
+    changed_files=$(git -C "$script_dir" diff --name-only)
+    changed_stowables=$(echo "$changed_files" | grep --fixed-string --line-regexp --file=<(echo "$stowable_files"))
+    if [[ -n $changed_stowables ]]; then
+        echo "Some stowables files have been modified. Please commit, revert or stash them to prevent change override:"
+        echo "$changed_stowables"
         exit 1
     fi
 }
@@ -25,6 +41,12 @@ install_codium_extensions() {
     xargs -L 1 codium --install-extension < "$script_dir"/non-home/codium-extensions
 }
 
+install_dotfiles() {
+    # Force symlink creation on existing files then revert them to wanted state
+    stow --adopt --verbose=2 --dir="$script_dir" .
+    git -C "$script_dir" restore "$stowable_files"
+}
+
 install_firefox_policies() {
     sudo mkdir -p /etc/firefox-esr/policies
     sudo mkdir -p /etc/firefox/policies
@@ -35,6 +57,7 @@ install_firefox_policies() {
 # SCRIPT
 check_not_root
 check_dir
-stow --adopt --verbose=2 --dir="$script_dir" .
+check_dotfiles_changes
+install_dotfiles
 install_firefox_policies
 install_codium_extensions
