@@ -47,7 +47,7 @@ install_codium_extensions() {
 
 install_dotfiles() {
     # Force symlink creation on existing files then revert them to wanted state
-    stow --adopt --verbose=2 --dir="$script_dir" .
+    stow --no-folding --restow --adopt --verbose=2 --dir="$script_dir" .
     echo "Restoring stowed files to their desired state..."
     git -C "$script_dir" restore $stowable_files
 }
