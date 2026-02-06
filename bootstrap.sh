@@ -66,17 +66,18 @@ install_arkenfox_directives() {
         "$script_dir/non-home/firefox-user-overrides.js" \
         "$profile_dir/user-overrides.js"
 
+    if pgrep -x firefox > /dev/null; then
+        echo "Close Firefox and re launch this script to update Arkenfox settings."
+        exit 1
+    fi
+
     # Set up Arkenfox (-s: silent -p: specify profile dir)
     arkenfox-updater -sp "$profile_dir"
 
     # Clean up user.js
-    if [ -f "$profile_dir/user.js" ]; then
-        {
-            pushd "$profile_dir" > /dev/null || return 1
-            arkenfox-cleaner -s # -s: start immediately
-            popd > /dev/null || return 1
-        }
-    fi
+    pushd "$profile_dir" > /dev/null || return 1
+    arkenfox-cleaner -s # -s: start immediately
+    popd > /dev/null || return 1
 }
 
 install_codium_extensions() {

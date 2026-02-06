@@ -12,6 +12,7 @@ The `non-home` folder contains files that are above the home folder in the folde
     * `Dotfiles/MAC/speaker`
 
 * If your Firefox profile has already been personnalized, you should run the [Arkenfox cleanup script](https://github.com/arkenfox/user.js/blob/master/scratchpad-scripts/arkenfox-cleanup.js).
+* Close Firefox
 
 ## Usage
 Clone this repo in `~/.dotfiles`, then run:
