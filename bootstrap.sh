@@ -67,7 +67,7 @@ install_arkenfox_directives() {
         "$profile_dir/user-overrides.js"
 
     # Set up Arkenfox (-s: silent -p: specify profile dir)
-    runuser -u "$username" arkenfox-updater -sp "$profile_dir"
+    arkenfox-updater -sp "$profile_dir"
 
     # Clean up user.js
     if [ -f "$profile_dir/user.js" ]; then
