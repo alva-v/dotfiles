@@ -41,6 +41,44 @@ check_not_root() {
     fi
 }
 
+install_arkenfox_directives() {
+    # Get Firefox directory
+    browser_dir=$(
+        find "$HOME/.mozilla/firefox" \
+             "$HOME/.config/mozilla/firefox" \
+             -name "profiles.ini" 2>/dev/null | head -1 | xargs dirname
+    )
+    profiles_ini="$browser_dir/profiles.ini"
+
+    # Create profile.ini if missing
+    if [ ! -f "$profiles_ini" ]; then
+        firefox --headless &>/dev/null &
+        sleep 1
+        kill -9 $!
+    fi
+
+    # Find profile directory
+    profile=$(sed --quiet "/Default=.*\.default-release/ s/.*=//p" "$profiles_ini")
+    profile_dir="$browser_dir/$profile"
+
+    # Set Arkenfox overrides
+    ln --no-dereference --symbolic --force \
+        "$script_dir/non-home/firefox-user-overrides.js" \
+        "$profile_dir/user-overrides.js"
+
+    # Set up Arkenfox (-s: silent -p: specify profile dir)
+    runuser -u "$username" arkenfox-updater -sp "$profile_dir"
+
+    # Clean up user.js
+    if [ -f "$profile_dir/user.js" ]; then
+        {
+            pushd "$profile_dir" > /dev/null || return 1
+            arkenfox-cleaner -s # -s: start immediately
+            popd > /dev/null || return 1
+        }
+    fi
+}
+
 install_codium_extensions() {
     xargs -L 1 codium --install-extension < "$script_dir"/non-home/codium-extensions
 }
@@ -53,10 +91,10 @@ install_dotfiles() {
 }
 
 install_firefox_policies() {
-    sudo mkdir -p /etc/firefox-esr/policies
     sudo mkdir -p /etc/firefox/policies
-    sudo ln -nsf "$script_dir/non-home/firefox-policies.json" /etc/firefox-esr/policies/policies.json
-    sudo ln -nsf "$script_dir/non-home/firefox-policies.json" /etc/firefox/policies/policies.json
+    sudo ln --no-dereference --symbolic --force \
+        "$script_dir/non-home/firefox-policies.json" \
+        /etc/firefox/policies/policies.json
 }
 
 # SCRIPT
@@ -65,4 +103,5 @@ check_dir
 check_dotfiles_changes
 install_dotfiles
 install_firefox_policies
+install_arkenfox_directives
 install_codium_extensions
