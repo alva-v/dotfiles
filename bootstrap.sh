@@ -105,3 +105,4 @@ install_dotfiles
 install_firefox_policies
 install_arkenfox_directives
 install_codium_extensions
+echo "Bootstrapping done!"
