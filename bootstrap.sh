@@ -41,6 +41,11 @@ check_not_root() {
     fi
 }
 
+error() {
+    printf "%s\n" "$1" >&2
+    exit 1
+}
+
 install_arkenfox_directives() {
     # Get Firefox directory
     browser_dir=$(
@@ -101,9 +106,8 @@ install_firefox_policies() {
 # SCRIPT
 check_not_root
 check_dir
-check_dotfiles_changes
-install_dotfiles
-install_firefox_policies
-install_arkenfox_directives
-install_codium_extensions
+check_dotfiles_changes || error "Error setting up dotfiles"
+install_firefox_policies || error "Error setting up Firefox policies"
+install_arkenfox_directives || error "Error setting up Arkenfox directives"
+install_codium_extensions || error "Error installing Codium extensions"
 echo "Bootstrapping done!"
