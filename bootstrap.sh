@@ -107,6 +107,7 @@ install_firefox_policies() {
 check_not_root
 check_dir
 check_dotfiles_changes || error "Error setting up dotfiles"
+install_dotfiles || error "Error installing dotfiles"
 install_firefox_policies || error "Error setting up Firefox policies"
 install_arkenfox_directives || error "Error setting up Arkenfox directives"
 install_codium_extensions || error "Error installing Codium extensions"
