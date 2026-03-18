@@ -16,4 +16,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "terminal.integrated.initialHint": false,
 }
