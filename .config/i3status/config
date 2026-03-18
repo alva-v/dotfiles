@@ -1,5 +1,6 @@
 general {
   colors = true
+  color_good = "#ffffff"
 }
 
 order += "volume master"
@@ -21,9 +22,9 @@ battery all {
 }
 
 cpu_temperature 0 {
-  format = "CPU 🌡 %degrees °C"
+  format = "CPU 🌡 %degrees°C"
   max_threshold = 60
-  format_above_threshold = "CPU 🥵 %degrees °C"
+  format_above_threshold = "CPU 🥵 %degrees°C"
 }
 
 disk "/" {
@@ -43,12 +44,13 @@ path_exists VPN {
 
 wireless _first_ {
   format_up = "📡:%quality at %essid (%bitrate)"
-  format_down =" 📡:❌"
+  format_down =" 📡: down"
+  color_bad = "#808080"
 }
 
 ethernet _first_ {
   format_up = "E: (%speed)"
-  format_down = "E:❌"
+  color_bad = "#808080"
 }
 
 volume master {

@@ -158,8 +158,24 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	strip_workspace_numbers yes
+        strip_workspace_numbers yes
+        colors {
+                background #000000
+                statusline #ffffff
+                separator #ffffff
+
+                # class                 border  backgr. text
+                focused_workspace       #ffffff #ffffff #000000
+                inactive_workspace      #1b1b1b #000000 #ffffff
+                urgent_workspace        #ffff00 #efcc00 #000000
+        }
 }
+
+# Window colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #ffffff #000000 #000000   #1b1b1b
+client.unfocused        #000000 #000000 #ffffff #ffffff   #1b1b1b
+client.urgent           #000000 #efcc00 #000000 #ffffff   #1b1b1b
 
 # Assign workspaces
 assign [class="firefox-esr"] $ws1
@@ -179,4 +195,3 @@ assign [class="Tor Browser"] 5
 # Startup
 exec --no-startup-id keepass2
 exec --no-startup-id gnome-terminal
-exec --no-startup-id redshift
