@@ -195,3 +195,5 @@ assign [class="Tor Browser"] 5
 # Startup
 exec --no-startup-id keepass2
 exec --no-startup-id gnome-terminal
+exec --no-startup-id dunst # Notification daemon
+exec --no-startup-id udiskie # Automount
