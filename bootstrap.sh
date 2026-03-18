@@ -47,6 +47,13 @@ error() {
 }
 
 install_arkenfox_directives() {
+    # Create profile.ini if missing
+    if [ ! -f "$profiles_ini" ]; then
+        firefox --headless &>/dev/null &
+        sleep 1
+        kill -9 $!
+    fi
+    
     # Get Firefox directory
     browser_dir=$(
         find "$HOME/.mozilla/firefox" \
@@ -54,13 +61,6 @@ install_arkenfox_directives() {
              -name "profiles.ini" 2>/dev/null | head -1 | xargs dirname
     )
     profiles_ini="$browser_dir/profiles.ini"
-
-    # Create profile.ini if missing
-    if [ ! -f "$profiles_ini" ]; then
-        firefox --headless &>/dev/null &
-        sleep 1
-        kill -9 $!
-    fi
 
     # Find profile directory
     profile=$(sed --quiet "/Default=.*\.default-release/ s/.*=//p" "$profiles_ini")
