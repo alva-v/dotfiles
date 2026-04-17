@@ -1,31 +1,36 @@
 # Dotfiles
-My Linux configurations files and a simple bootstrapping script.
+My Linux configuration files and a simple bootstrapping script. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-The `non-automated` folder contains files that I still have to set up bootstrapping logic for.
+## Repository layout
 
-The `non-home` folder contains files that are above the home folder in the folder hierarchy and config files that are to be used by the bootstrapping script without being stowed.
+- **Stowable files** — everything not excluded by `.stow-local-ignore` is symlinked into `$HOME` by `bootstrap.sh`
+- **`non-home/`** — files deployed outside `$HOME` or used by bootstrap without being stowed.
+- **`non-automated/`** — configs not yet bootstrapped
 
-# Before
-* `pass` should be initialized and contain the following secrets:
-    * `Dotfiles/email`
-    * `Dotfiles/MAC/headset`
-    * `Dotfiles/MAC/speaker`
+## Prerequisites
 
-* If your Firefox profile has already been personnalized, you should run the [Arkenfox cleanup script](https://github.com/arkenfox/user.js/blob/master/scratchpad-scripts/arkenfox-cleanup.js).
-* Close Firefox
+- `pass` must be initialised and contain:
+  - `Dotfiles/email`
+  - `Dotfiles/MAC/headset`
+  - `Dotfiles/MAC/speaker`
+- If your Firefox profile has already been personalised, run the [Arkenfox cleanup script](https://github.com/arkenfox/user.js/blob/master/scratchpad-scripts/arkenfox-cleanup.js) first
+- Close Firefox before running bootstrap.sh
 
 ## Usage
+
 Clone this repo in `~/.dotfiles`, then run:
-```
+```bash
 bash bootstrap.sh
 ```
-You can update the VS Codium extension list by using the following:
-```
+
+
+
+To update the VSCodium extension list from your currently installed extensions:
+```bash
 bash update.sh
 ```
 
+
 ## Notes on non-automated files
 ### Redirector.json
-Config for the [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/redirector/).
-
 Might be possible to automatically deploy by inserting the data in the corresponding local storage sqlite table.
