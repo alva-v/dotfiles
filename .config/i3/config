@@ -207,8 +207,9 @@ client.urgent           #000000 #efcc00 #000000 #ffffff   #1b1b1b
 assign [class="firefox-esr"] $ws1
 assign [class="firefox"] $ws1
 assign [class="KeePass2"] $ws1
-assign [class="keepassxc"] $ws1
+assign [class="keePassxc"] $ws1
 assign [class="Transmission-gtk"] $ws4
+assign [class="transmission-gtk"] $ws4
 assign [class="slsk"] $ws4
 assign [class="Nicotine"] $ws4
 assign [class="Gnome-terminal"] $ws3
@@ -222,7 +223,7 @@ assign [class="org.mozilla.Thunderbird"] $ws2
 assign [class="Tor Browser"] 5
 
 # Startup
-exec --no-startup-id keepassx
+exec --no-startup-id keepassxc
 exec --no-startup-id gnome-terminal
 exec --no-startup-id dunst # Notification daemon
 exec --no-startup-id udiskie # Automount
