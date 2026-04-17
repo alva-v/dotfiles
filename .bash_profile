@@ -14,6 +14,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Composer
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
+# Local Bin
+PATH="$HOME/.local/bin:$PATH"
 
 # Vim as default editor
 VISUAL=vim
