@@ -7,8 +7,10 @@ codingyu.laravel-goto-view
 csstools.postcss
 dbaeumer.vscode-eslint
 devsense.composer-php-vscode
+devsense.intelli-php-vscode
 devsense.phptools-vscode
 devsense.profiler-php-vscode
+dsznajder.es7-react-js-snippets
 editorconfig.editorconfig
 esbenp.prettier-vscode
 ionutvmi.path-autocomplete
@@ -22,6 +24,7 @@ mechatroner.rainbow-csv
 mehedidracula.php-namespace-resolver
 mikestead.dotenv
 mohamedbenhida.laravel-intellisense
+msjsdiag.vscode-react-native
 naoray.laravel-goto-components
 neilbrayfield.php-docblocker
 onecentlin.laravel-blade
