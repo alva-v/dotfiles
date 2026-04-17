@@ -112,12 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ENV Variables using pass
-EMAIL=$(pass Dotfiles/email)
-HEADSET=$(pass Dotfiles/MAC/headset)
-SPEAKER=$(pass Dotfiles/MAC/speaker)
-export EMAIL HEADSET SPEAKER
-
 # Custom aliases
 alias upgrade="sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo yt-dlp -U && sudo apt autoremove --purge"
 alias vpn-on="mullvad connect && mullvad lockdown-mode set on && mullvad status && sleep 1 && mullvad status"
