@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 # Custom aliases
-alias upgrade="sudo pacman -Syu && pacman -Qdtq | ifne sudo pacman -Rns -"
+alias upgrade="sudo pacman -Syu && yay -Syu && pacman -Qdtq | ifne sudo pacman -Rns -"
 alias vpn-on="mullvad connect && mullvad lockdown-mode set on && mullvad status && sleep 1 && mullvad status"
 alias vpn-off="mullvad disconnect && mullvad lockdown-mode set off && mullvad status && sleep 1 && mullvad status"
 alias vpn-rst="mullvad reconnect && mullvad status && sleep 1 && mullvad status"
