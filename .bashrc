@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 # Custom aliases
-alias upgrade="sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo yt-dlp -U && sudo apt autoremove --purge"
+alias upgrade="sudo pacman -Syu && pacman -Qdtq | ifne sudo pacman -Rns -"
 alias vpn-on="mullvad connect && mullvad lockdown-mode set on && mullvad status && sleep 1 && mullvad status"
 alias vpn-off="mullvad disconnect && mullvad lockdown-mode set off && mullvad status && sleep 1 && mullvad status"
 alias vpn-rst="mullvad reconnect && mullvad status && sleep 1 && mullvad status"
