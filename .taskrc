@@ -29,3 +29,4 @@ color.tag.social=bold magenta
 urgency.blocking.coefficient=0
 urgency.tags.coefficient=0
 urgency.project.coefficient=0
+news.version=3.4.2
