@@ -33,4 +33,4 @@ bash update.sh
 
 ## Notes on non-automated files
 ### Redirector.json
-Might be possible to automatically deploy by inserting the data in the corresponding local storage sqlite table.
+Might be possible to automatically deploy by inserting the data in the corresponding local storage sqlite table. Data is compressed using Google's Snappy algorithm.
