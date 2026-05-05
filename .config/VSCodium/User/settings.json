@@ -8,8 +8,8 @@
   "redhat.telemetry.enabled": false,
   "terminal.integrated.gpuAcceleration": "off",
   "window.zoomLevel": -1,
-  "workbench.colorTheme": "Sweet Dracula",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Dayfox",
+  "workbench.iconTheme": "catppuccin-latte",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
