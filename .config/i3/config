@@ -33,6 +33,16 @@ bindsym $mod+Shift+a kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 
+# Screenshots (https://gist.github.com/dianjuar/ee774561a8bc02b077989bc17424a19f)
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -211,6 +221,7 @@ assign [class="keePassxc"] $ws1
 assign [class="Transmission-gtk"] $ws4
 assign [class="transmission-gtk"] $ws4
 assign [class="slsk"] $ws4
+assign [class="SoulseekQt"] $ws4
 assign [class="Nicotine"] $ws4
 assign [class="Gnome-terminal"] $ws3
 assign [class="VSCodium"] $ws3
