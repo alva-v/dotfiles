@@ -19,8 +19,9 @@ PATH="$HOME/.local/bin:$PATH"
 
 # Vim as default editor
 VISUAL=vim
+EDITOR=$VISUAL
 
-export GEM_HOME PATH PHP_PEAR_PHP_BIN VISUAL
+export GEM_HOME PATH PHP_PEAR_PHP_BIN VISUAL EDITOR
 
 # ENV Variables
 EMAIL=$(pass Dotfiles/email)
