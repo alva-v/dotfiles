@@ -2,7 +2,8 @@
   "editor.accessibilitySupport": "off",
   "editor.rulers": [80, 120],
   "files.associations": {
-    "*.php.stub": "php"
+    "*.php.stub": "php",
+    "*.ssi": "html",
   },
   "editor.renderWhitespace": "all",
   "redhat.telemetry.enabled": false,
@@ -28,5 +29,11 @@
   },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
 }
